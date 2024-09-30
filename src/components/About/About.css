@@ -1,0 +1,264 @@
+.about {
+    width: 85%;
+    margin: 40px auto;
+    padding: 20px;
+    height: auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.about-nashik-img img{
+    transform: scale(0.7);
+}
+
+.about-clg, .about-nashik {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.about-clg-left, .about-nashik-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-clg-right, .about-nashik-img {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    text-align: center;      /* Center text within the container */
+}
+
+.about-clg-right img, .about-nashik-img img {
+    max-width: 100%; /* Ensure the image does not overflow */
+    height: auto;    /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-clg-desc{
+    text-align: justify;
+}
+
+.about-nashik-desc{
+    text-align: justify;
+}
+
+.about-clg-right img, .about-nashik-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-clg-heading, .about-nashik-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.about-clg-desc, .about-nashik-desc {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-nashik-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-nashik-link:hover {
+    color: #003f7f;
+}
+
+.about-nashik-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #efefef;
+    background-color: #0056b3;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+.about-nashik-link:hover {
+    background-color: #004494;
+    color: chartreuse;
+    transform: translateY(-3px);
+}
+
+.about-nashik-link:active {
+    background-color: #00336f;
+    color: chartreuse;
+    transform: translateY(1px);
+}
+
+.about-nashik-link:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.5);
+}
+
+@media (max-width: 768px) {
+    .about-clg, .about-nashik {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-clg-left, .about-nashik-left {
+        padding-right: 0;
+    }
+
+    .about-clg-right img, .about-nashik-img img {
+        width: 90%;
+    }
+
+    .about-clg-heading, .about-nashik-heading {
+        font-size: 28px;
+    }
+
+    .about-clg-desc, .about-nashik-desc {
+        font-size: 16px;
+    }
+
+    .about-nashik-link {
+        font-size: 16px;
+    }
+}
+
+.accomodation {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.accomodation h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.accomodation p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.hotel-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hotel-info {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hotel-info:hover {
+    transform: translateY(-10px);
+}
+
+.hotel-info h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.hotel-info h4 {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+}
+
+.hotel-info p {
+    font-size: 1rem;
+    color: #95a5a6;
+    margin-bottom: 1rem;
+}
+
+.hotel-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.about-iceisf {
+    background-color: #f0f0f0; /* Light background color for distinction */
+    padding: 2rem; /* Add some padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 2rem; /* Space below the section */
+    margin-top: 50px;
+}
+
+.about-iceisf h2 {
+    font-size: 2rem; /* Font size for the heading */
+    color: #0056b3; /* Consistent blue color */
+    margin-bottom: 1rem; /* Space below the heading */
+    text-align: center; /* Center align the heading */
+    font-weight: bold; /* Bold text */
+}
+
+.about-iceisf p {
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.6; /* Good line spacing for readability */
+    color: #555; /* Dark gray color for text */
+    text-align: justify; /* Justify the paragraph for cleaner alignment */
+    margin-bottom: 1rem; /* Space below the text */
+}
+
+@media (max-width: 768px) {
+    .about-iceisf {
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .about-iceisf h2 {
+        font-size: 1.75rem; /* Slightly reduce heading size on mobile */
+    }
+
+    .about-iceisf p {
+        font-size: 0.9rem; /* Adjust text size for readability on smaller screens */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hotel-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hotel-info {
+        width: 90%;
+    }
+}

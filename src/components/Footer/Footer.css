@@ -1,0 +1,253 @@
+.footer {
+    margin-top: 100px;
+    background: var(--primary-color);
+    color: white;
+    padding: 50px 20px;
+    position: relative;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.cover-div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-heading{
+    color: chartreuse;
+    font-size: 25px;
+}
+
+.social-icons{
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.above-content {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.above-content::after {
+    content: '';
+    width: 105px;
+    height: 3px;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.above-content h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--light-color);
+}
+
+.below-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.left-content, .right-content {
+    /* flex: 1; */
+    min-width: 300px;
+}
+
+.left-content ul, .right-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-content li, .right-content li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer hr{
+    width: 100%;
+    height: 2px;
+    align-self: center;
+}
+
+.copyright{
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.footer p, .footer span {
+    color: white;
+    font-size: 14px;
+}
+.center{
+    text-align: center;
+}
+.footer li span {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--dark-color);
+}
+
+span.icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    border: 2px solid var(--light-color);
+    transition: all ease-in 0.3s;
+}
+
+.icon:hover{
+    color: chocolate;
+    scale: 1.5;
+}
+.contact-cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: center; /* Center cards */
+    flex-wrap: wrap;
+}
+
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-left {
+    flex: 1;
+}
+
+.card-left h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-left p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.card-right {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #ccc;
+    transition: transform 0.5s ease;
+}
+
+.card-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .card-right img {
+    transform: scale(1.1);
+}
+
+.contact-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.contact-card:hover::before {
+    opacity: 1;
+}
+
+.card-heading {
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 20px; /* Padding around the heading */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+}
+
+.card-heading h2 {
+    font-size: 24px; /* Adjust the font size */
+    color: #333; /* Dark text color */
+    margin: 0; /* Remove default margin */
+    font-weight: 600; /* Semi-bold text */
+    letter-spacing: 1px; /* Space out the letters slightly */
+    text-transform: uppercase; /* Uppercase the text */
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-card {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+
+.contact-card:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .below-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,115 @@
+:root{
+    --primary-color: #2e2828;
+    --secondary-color: #503a3a;
+    --light-color: #f65151;
+    --dark-color: #96da10;
+}
+
+.navbar{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--primary-color);
+    /* position: fixed; */
+}
+
+.navbar img{
+    width: 100px;
+    border-radius: 5px;
+}
+
+.navbar-center{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.navbar-center a{
+    color: var(--dark-color);
+    border-radius: 4px;
+    transition: 0.3s;
+    width: auto;
+    height: auto;
+    padding: 10px;
+}
+
+.navbar-center a:hover, .navbar-center a.active{
+    background: var(--secondary-color);
+}
+
+.navbar-right button{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: var(--dark-color);
+    cursor: pointer;
+    font-size: 17px;
+}
+
+/* Existing styles above */
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right button {
+    margin-left: 10px; /* Add space between buttons */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Width of the sidebar */
+    height: 100%;
+    background: var(--primary-color);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 1000; /* Make sure it's on top of other elements */
+    transition: transform 0.3s ease;
+    transform: translateX(-100%); /* Hide by default */
+}
+
+.sidebar button.close-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: var(--dark-color);
+    cursor: pointer;
+    margin-bottom: 20px; /* Space below the close button */
+}
+
+.sidebar a {
+    display: block;
+    margin: 10px 0; /* Space between links */
+    color: var(--dark-color);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: var(--secondary-color);
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .navbar-center {
+        display: none; /* Hide links in navbar on mobile */
+    }
+
+    .navbar-right button {
+        display: block; /* Show the sidebar toggle button */
+    }
+
+    .sidebar {
+        transform: translateX(0); /* Show sidebar when open */
+    }
+}

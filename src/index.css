@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1; /* Add border for a gap between thumb and track */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #f1f1f1;
+}
+
+.m-top{
+  margin-top: 50px;
+}
+
+a{
+  text-decoration: none;
+}
+
+:root{
+  --primary-color: #2e2828;
+  --secondary-color: #503a3a;
+  --light-color: #f65151;
+  --dark-color: #96da10;
+}
+
+.red{
+  color: #E67E22;
+}
+
+.blue{
+  color: #3498DB;
+}

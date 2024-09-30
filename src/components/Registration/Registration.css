@@ -1,0 +1,137 @@
+.registration {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    margin: 0px 35px;
+  }
+  
+  .registration h2 {
+    font-size: 28px;
+    color: #0277bd;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .registration h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 10px auto 0;
+    background-color: #ff7043;
+    transition: width 0.3s ease;
+  }
+  
+  .registration h2:hover::after {
+    width: 100px;
+  }
+  
+  .paper-presentation ul,
+  .payment-mode ul {
+    list-style: disc;
+    margin-left: 40px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .paper-presentation ul li,
+  .payment-mode ul li {
+    margin-bottom: 10px;
+    position: relative;
+    left: -30px;
+    transition: all 0.3s ease;
+  }
+  
+  .paper-presentation ul li:hover,
+  .payment-mode ul li:hover {
+    color: #ff7043;
+    left: 0;
+  }
+  
+  .registration-fees {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .registration-fees table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  table th {
+    background-color: #0277bd;
+    color: white;
+  }
+  
+  table td {
+    color: #333;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  .payment-mode ul li {
+    padding-left: 10px;
+    position: relative;
+    opacity: 0;
+    animation: slideIn 0.7s ease forwards;
+  }
+  
+  .payment-mode ul li:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .payment-mode ul li:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    table, th, td {
+      font-size: 14px;
+    }
+    .registration h2::after {
+      width: 40px;
+    }
+  }
+  

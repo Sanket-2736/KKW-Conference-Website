@@ -1,0 +1,228 @@
+/* Committee.css */
+
+.committee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .international-committee-details, .local-committee-detailsm .technical-committee {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+  }
+  
+  .international-committee-details h2,
+  .local-committee-details h2 , .technical-committee h2{
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    color: #333;
+  }
+  
+  .international-committee-details h2::after,
+  .local-committee-details h2::after, .technical-committee h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  .members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-body {
+    padding: 15px;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+  
+  .body-title h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .body-desc p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  @media (max-width: 767px) {
+    .card {
+      width: 100%;
+    }
+  }
+  
+  /* Hover Effect */
+  .card:hover {
+    transform: scale(1.05); /* Slight scaling of the card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  .card:hover .card-image img {
+    transform: scale(1.1); /* Slight zoom of the image */
+  }
+  
+  .card:hover .body-title h3 {
+    color: #007bff; /* Change text color on hover */
+  }
+  
+  .organising-committee {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+  }
+  
+  .organising-committee .member-cards-div {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .member-cards-div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Ensure consistent dimensions for all member images */
+.card-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fits the circle */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for cards */
+.card:hover .card-image img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+  
+  .member-img {
+    flex: 0 0 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  
+  .member-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .member-cards-div:hover .member-img img {
+    transform: scale(1.1);
+  }
+  
+  .member-decription {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .member-decription h2 {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 5px;
+  }
+  
+  .member-decription h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .member-decription p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  @media (max-width: 767px) {
+    .member-cards-div {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .member-img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .member-decription {
+      text-align: center;
+    }
+  }
+  /* Grid layout with 3 cards per row for International, Local Advisory, and Technical Committees */
+/* Set a maximum width for the grid container */
+.international-committee-details .members-grid,
+.local-committee-details .members-grid,
+.technical-committee .members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px;
+  max-width: 1200px; /* Limit the width of the grid container */
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Set a maximum width for individual cards */
+.card {
+  max-width: 300px; /* Restrict the card width */
+  width: 100%; /* Ensure responsiveness */
+  margin: 0 auto; /* Center the cards */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+  .international-committee-details .members-grid,
+  .local-committee-details .members-grid,
+  .technical-committee .members-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row on mobile */
+  }
+}
